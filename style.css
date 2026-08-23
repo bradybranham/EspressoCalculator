@@ -1,0 +1,122 @@
+body {
+    background-color: #f3eee8;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
+    padding: 60px 20px;
+
+    .calculator {
+        background-color: white;
+
+        width: 100%;
+        max-width: 520px;
+
+        padding: 32px;
+
+        border-radius: 16px;
+    }
+
+    .input-group {
+        margin-top: 24px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 8px;
+
+        font-weight: 600;
+    }
+
+    input,
+    select {
+        font-size: 16px;
+
+        padding: 12px;
+
+        border: 1px solid #cccccc;
+        border-radius: 8px;
+
+        box-sizing: border-box;
+
+    }
+
+    .dose-input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .dose-input input {
+        flex: 1;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+
+        margin-top: 24px;
+        padding: 14px;
+
+        border: none;
+        border-radius: 8px;
+
+        background-color: #5c4033;
+        color: white;
+
+        font-size: 16px;
+        font-weight: 600;
+
+        cursor: pointer;
+    }
+
+    .results {
+        margin-top: 28px;
+        padding: 20px;
+
+        background-color: #f7f3ef;
+        border-radius: 12px;
+    }
+
+    .results h2 {
+        margin-top: 0;
+        margin-bottom: 16px;
+
+        font-size: 18px;
+    }
+
+    .result-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .result-item {
+        background-color: white;
+
+        padding: 16px;
+
+        border-radius: 10px;
+    }
+
+    .result-label {
+        display: block;
+
+        font-size: 13px;
+        color: #777777;
+
+        margin-bottom: 4px;
+    }
+
+    .result-value {
+        font-size: 22px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+}

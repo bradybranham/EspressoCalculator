@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Espresso Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+
+        <h1>Espresso Calculator</h1>
+        <p>Let's make some coffee!</p>
+
+        <div class="input-group">
+            <label for="dose">Coffee dose:</label>
+
+            <div class="dose-input">
+                <input id="dose" type="number" value="18" min="5" max="30" step="0.1">
+                <span>grams</span>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="roast">Roast level:</label>
+
+            <div class="roast-input">
+                <select id="roast">
+                    <option value="light">Light</option>
+                    <option value="medium">Medium</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="auto-calculate">
+            <input id="auto-calculate" type="checkbox">
+            <label for="auto-calculate">Auto Calculate</label>
+        </div>
+
+        <button id="calculate">calculate</button>
+
+        <div class="results">
+            <h2>Recommended shot</h2>
+
+            <div class="result-grid">
+                <div class="result-item">
+                    <span class="result-label">Dose</span>
+                    <span id="input-dose" class="result-value">-- g</span>
+                </div>
+
+                <div class="result-item">
+                    <span class="result-label">Output</span>
+                    <span id="output" class="result-value">-- g</span>
+                </div>
+
+                <div class="result-item">
+                    <span class="result-label">Time</span>
+                    <span id="time" class="result-value">-- sec</span>
+                </div>
+
+                <div class="result-item">
+                    <span class="result-label">Ratio</span>
+                    <span id="ratio" class="result-value">--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
