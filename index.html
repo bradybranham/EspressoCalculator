@@ -17,20 +17,56 @@
             <label for="dose">Coffee dose:</label>
 
             <div class="dose-input">
-                <input id="dose" type="number" value="18" min="5" max="30" step="0.1">
-                <span>grams</span>
+                <input id="dose" type="range" value="18" min="5" max="30" step="0.5">
+                <span id="dose-display">18 g</span>
             </div>
         </div>
 
         <div class="input-group">
-            <label for="roast">Roast level:</label>
+            <label>Roast level:</label>
 
-            <div class="roast-input">
-                <select id="roast">
-                    <option value="light">Light</option>
-                    <option value="medium">Medium</option>
-                    <option value="dark">Dark</option>
-                </select>
+            <div class="roast-options">
+
+                <input type="radio"
+                       id="light"
+                       name="roast"
+                       value="light">
+
+                <label for="light">Light</label>
+
+
+                <input type="radio"
+                       id="light-medium"
+                       name="roast"
+                       value="light-medium">
+
+                <label for="light-medium">Light-Medium</label>
+
+
+                <input type="radio"
+                       id="medium"
+                       name="roast"
+                       value="medium"
+                       checked>
+
+                <label for="medium">Medium</label>
+
+
+                <input type="radio"
+                       id="medium-dark"
+                       name="roast"
+                       value="medium-dark">
+
+                <label for="medium-dark">Medium-Dark</label>
+
+
+                <input type="radio"
+                       id="dark"
+                       name="roast"
+                       value="dark">
+
+                <label for="dark">Dark</label>
+
             </div>
         </div>
         <br><br>

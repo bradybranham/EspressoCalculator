@@ -1,11 +1,16 @@
 const button = document.getElementById('calculate')
 const autoCalculate = document.getElementById('auto-calculate');
 const doseInput = document.getElementById('dose');
-const roastInput = document.getElementById('roast');
+const roastInputs = document.querySelectorAll(
+    'input[name="roast"]'
+);
+const doseDisplay = document.getElementById("dose-display");
 
 function calculate() {
     const dose = Number(doseInput.value);
-    const roast = roastInput.value;
+    const roast = document.querySelector(
+        'input[name="roast"]:checked'
+    ).value;
 
     if (dose == 0) {
         alert("Please enter a dose.")
@@ -21,15 +26,23 @@ function calculate() {
     let ratio;
     let time;
 
-    if (roast == "light") {
+    if (roast === "light") {
         ratio = 2.75;
         time = "28-35";
     }
-    else if (roast == "medium") {
+    else if (roast === "light-medium") {
+        ratio = 2.5;
+        time = "27-34";
+    }
+    else if (roast === "medium") {
         ratio = 2.25;
         time = "25-32";
     }
-    else if (roast == "dark") {
+    else if (roast === "medium-dark") {
+        ratio = 2.0;
+        time = "24-30";
+    }
+    else if (roast === "dark") {
         ratio = 1.75;
         time = "22-28";
     }
@@ -69,9 +82,25 @@ doseInput.addEventListener('input', function() {
     }
 })
 
-roastInput.addEventListener('change', function() {
+roastInputs.forEach(function (roastInput) {
+
+    roastInput.addEventListener("change", function () {
+
+        if (autoCalculate.checked) {
+            calculate();
+        }
+
+    });
+
+});
+
+doseInput.addEventListener("input", function () {
+    doseDisplay.textContent = doseInput.value + " g";
+
     if (autoCalculate.checked) {
         calculate();
     }
-})
+});
+
+
 
